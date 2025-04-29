@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
