@@ -8,11 +8,10 @@ export const LanguageThemeProvider = ({ children }) => {
   const [lang, setLang] = useState("en");
   const [mode, setMode] = useState("dark");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   const [t, setT] = useState(null); 
   const [firstLoad, setFirstLoad] = useState(true);
 
-  // LocalStorage'dan dili ve temayı al
+
   useEffect(() => {
     const storedLang = localStorage.getItem("lang");
     const storedMode = localStorage.getItem("mode");
@@ -20,14 +19,14 @@ export const LanguageThemeProvider = ({ children }) => {
     if (storedMode) setMode(storedMode);
   }, []);
 
-  // Her lang veya mode değişiminde localStorage güncelle
+
   useEffect(() => {
     localStorage.setItem("lang", lang);
     localStorage.setItem("mode", mode);
   }, [lang, mode]);
   useEffect(() => {
     const fetchLangData = async () => {
-      setLoading(true); // Yükleniyor durumunu başlat
+      setLoading(true); 
       try {
         const response = await axios.get("/data.json");
         setT(response.data.languages[lang]);
@@ -38,20 +37,20 @@ export const LanguageThemeProvider = ({ children }) => {
           );
         }
       } catch (err) {
-        setError("Dil verisi alınırken bir hata oluştu.");
         toast.error("Dil verisi alınamadı.");
+        console.error("Hata: ", err); 
       } finally {
-        setLoading(false); // Yükleniyor durumu kapandı
+        setLoading(false); 
       }
     };
   
     fetchLangData();
-  }, [lang, firstLoad]); // firstLoad da dependency olarak ekledik.
+  }, [lang, firstLoad]); 
   
   const toggleLang = () => {
     const newLang = lang === "en" ? "tr" : "en";
     setLang(newLang);
-    setFirstLoad(false); // İlk yükleme bitti, bundan sonra mesaj gösterilebilir
+    setFirstLoad(false); 
   };
   
 
@@ -63,7 +62,7 @@ export const LanguageThemeProvider = ({ children }) => {
     toast.info(newMode === "dark" ? "Koyu tema aktif" : "Açık tema aktif");
   };
 
-  // Dil verisi yüklenmeden çocuk bileşenleri render etme
+ 
   if (!t) return <div>Yükleniyor...</div>;
 
   return (
