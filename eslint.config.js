@@ -27,7 +27,9 @@ export default [
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
+         
       ],
+       "react-refresh/only-export-components": "off"
     },
   },
 ]

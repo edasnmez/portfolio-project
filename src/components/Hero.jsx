@@ -1,44 +1,68 @@
 import React from 'react';
-import { useLanguageTheme } from '../contexts/LanguageThemeContext';
+import { useLanguageTheme } from '../contexts/LanguageThemeContext.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub,faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import MainImage from '../assets/main-image.png';
 
 
 function Hero() {
-    const { lang, mode, toggleLang, toggleMode, t } = useLanguageTheme();
+    const {mode,t } = useLanguageTheme();
   return (
-    <main className='py-16 flex justify-between items-start '>
-        <div className='hero-left flex flex-col items-start w-[596px] h-[428px] gap-8'>
-            <div className='name-box w-[201px] h-[28px] flex items-center gap-2'>
-                <div className="w-[80px] h-0 border-t border-[#3730A3] bg-[#4338CA]"></div>
-                <span className="font-inter font-medium text-[16px] text-[#4338CA] ">Almila Su</span>
-            </div>
-            <div className="title h-[144px] font-inter font-bold text-7xl leading-none text-[#1F2937]">
-                {t.hero.title}
-            </div>
-            <div className="desc w-[553px] h-[84px] font-inter font-normal text-lg leading-7 text-[#6B7280]">
-                {t.hero.desc}
-            </div>
-            <div className='buttons flex flex-row items-start gap-3 w-[421px] h-[52px]'>
-                <button className="w-[110px] h-[42px] bg-[#4338CA] text-white font-inter font-medium text-base rounded-[6px] hover:bg-[#3730A3] transition-all">
-                    {t.header[2]}
-                </button>
-                <button className="w-[110px] h-[42px] bg-[#FFFFFF] border border-[#4338CA] text-[#4338CA] font-inter font-medium text-base rounded-[6px] hover:bg-[#4338CA] hover:text-white transition-all">
-                <FontAwesomeIcon icon={faGithub} size="lg" className=" text-[#3730A3] pr-2" />
-                Github
-                </button>
-                <button className="w-[110px] h-[42px] bg-[#FFFFFF] border border-[#4338CA] text-[#4338CA] font-inter font-medium text-base rounded-[6px] hover:bg-[#4338CA] hover:text-white transition-all">
-                <FontAwesomeIcon icon={faLinkedinIn} size="lg" className=" text-[#3730A3] pr-2"/>
-                    Linkedin
-                </button>
-            </div>
-        </div>
-        <img src={MainImage} alt="Main Image" 
-        className="w-[420px] h-[330px]  rounded-[18px]"
-        />
+    <main className='lg:py-30 py-10 px-4 sm:px-6 md:px-12 lg:px-[150px] flex flex-col lg:flex-row justify-between items-start gap-10'>
+  <div className='hero-left flex flex-col items-start w-full gap-6 lg:w-[596px] lg:h-[428px]'>
+    
+    {/* Name Box */}
+    <div className='name-box flex items-center gap-2 w-fit h-[28px]'>
+      <div className={`w-[80px] h-0 border-t ${mode === "dark" ? "border-[#BAB2E7]" : "border-[#3730A3]"}`}></div>
+      <span className={`font-inter font-medium text-sm sm:text-base ${mode === "dark" ? "text-[#BAB2E7]" : "text-[#4338CA]"}`}>
+        Almila Su
+      </span>
+    </div>
 
-    </main>
+    {/* Title */}
+    <div className={`font-inter font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl ${mode === "dark" ? "text-[#AEBCCF]" : "text-[#1F2937]"}`}>
+      {t.hero.title}
+    </div>
+
+    {/* Description */}
+    <div className={`font-inter font-normal text-sm sm:text-base md:text-lg leading-6 sm:leading-7 w-full lg:w-[553px] ${mode === "dark" ? "text-[#FFFFFF]" : "text-[#6B7280]"}`}>
+      {t.hero.desc}
+    </div>
+
+    {/* Buttons */}
+    <div className='buttons flex flex-wrap gap-3 w-full lg:w-[421px]'>
+      {[
+        { label: t.header[2], icon: null },
+        { label: 'Github', icon: faGithub },
+        { label: 'Linkedin', icon: faLinkedinIn },
+      ].map(({ label, icon }, i) => (
+        <button
+          key={i}
+          className={`flex items-center justify-center gap-2 px-4 h-[36px] sm:h-[38px] md:h-[40px] lg:h-[42px] text-xs sm:text-sm md:text-base rounded-[6px] transition-all cursor-pointer
+            ${mode === "dark"
+              ? i === 0
+                ? "bg-[#E1E1FF] text-black hover:bg-[#BAB2E7] hover:text-[#4338CA]"
+                : "bg-[#383838] text-[#E1E1FF] border border-[#E1E1FF] hover:bg-[#BAB2E7] hover:text-[#4338CA]"
+              : i === 0
+                ? "bg-[#4338CA] text-white hover:bg-[#3730A3]"
+                : "bg-white text-[#4338CA] border border-[#4338CA] hover:bg-[#4338CA] hover:text-white"
+            }`}
+        >
+          {icon && <FontAwesomeIcon icon={icon} size="sm" className="pr-1" />}
+          {label}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  {/* Image */}
+  <img
+    src={MainImage}
+    alt="Main Image"
+    className="hidden lg:block w-[420px] h-[330px] rounded-[18px]"
+  />
+</main>
+
   );
 }
 

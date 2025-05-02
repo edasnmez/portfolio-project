@@ -1,0 +1,100 @@
+
+{
+    "languages": {
+      "tr": {
+        "mode_switch": ["KARANLIK MOD", "AÇIK MOD"],
+        "lang":"ENGLISH",
+        "header": ["Yetenekler", "Projeler", "Beni İşe Al"],
+        "hero": {
+          "title": "Yaratıcı Düşünen Minimalist",
+          "desc": "Merhaba, ben Almila. Full-stack geliştiricisiyim. Sağlam ve ölçeklenebilir ön yüz ürünleri geliştirip harika kullanıcı deneyimleri sunabilecek bir geliştirici arıyorsanız, tanışalım!",
+          "buttons": ["Beni İşe Al", "Github", "Linkedin"]
+        },
+        "skills": [
+          { "title": "JavaScript", "desc": "JavaScript, web sitelerine etkileşim kazandırmak için kullanılan popüler bir programlama dilidir. Tarayıcı üzerinde çalışarak kullanıcı deneyimini artırır." },
+          { "title": "React.Js", "desc": "React.js, kullanıcı arayüzleri oluşturmak için geliştirilen bir JavaScript kütüphanesidir. Bileşen tabanlı yapısı sayesinde yeniden kullanılabilir arayüzler sunar." },
+          { "title": "Node.Js", "desc": "Node.js, JavaScript'in sunucu tarafında çalışmasını sağlayan bir platformdur. Gerçek zamanlı ve yüksek performanslı uygulamalar geliştirmeyi kolaylaştırır." }
+        ],
+        "profile": [
+          {
+            "title": "Profil",
+            "subhead": ["Doğum Tarihi", "İkamet Şehri", "Eğitim Durumu", "Tercih Ettiği Rol"],
+            "desc": ["24.03.1996", "Ankara", "Hacettepe Ünv. Biyoloji Lisans, 2016", "Frontend, UI"]
+          },
+          {
+            "title": "Hakkımda",
+            "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\nMinima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+          }
+        ],
+        "projects": [
+          {
+            "title": "Workintech",
+            "desc": "Kullanıcıların kabul etmek veya reddetmek istedikleri çerezleri seçmelerine olanak tanıyan basit, özelleştirilebilir, minimal kurulumlu bir çerez eklentisi. Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur. NPM paketi olarak mevcuttur ve git deposu üzerinden kod ve tema özelleştirmeleri yapılabilir.",
+             "image": "/public/projects-one.png"
+          },
+          {
+            "title": "Random Jokes",
+            "desc": "Kullanıcıların kabul etmek veya reddetmek istedikleri çerezleri seçmelerine olanak tanıyan basit, özelleştirilebilir, minimal kurulumlu bir çerez eklentisi. Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur. NPM paketi olarak mevcuttur ve git deposu üzerinden kod ve tema özelleştirmeleri yapılabilir.",
+            "image": "/public/projects-two.png"
+          },
+          {
+            "title": "Journey",
+            "desc": "Kullanıcıların kabul etmek veya reddetmek istedikleri çerezleri seçmelerine olanak tanıyan basit, özelleştirilebilir, minimal kurulumlu bir çerez eklentisi. Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur. NPM paketi olarak mevcuttur ve git deposu üzerinden kod ve tema özelleştirmeleri yapılabilir.",
+            "image": "/public/projects-three.png"
+          }
+        ],
+        "footer": {
+          "title": "Bir sonraki ürününüz üzerinde birlikte çalışalım.",
+          "links": ["Kişisel Blog", "Github", "Linkedin"]
+        }
+      },
+      "en": {
+        "mode_switch": ["DARK MODE", "LIGHT MODE"],
+        "lang":"TÜRKÇE",
+        "header": ["Skills", "Projects", "Hire Me"],
+        "hero": {
+          "title": "Creative thinker Minimalism lover",
+          "desc": "Hi, I’m Almila. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.",
+          "buttons": ["Hire Me", "Github", "Linkedin"]
+        },
+        "skills": [
+          { "title": "JavaScript", "desc": "JavaScript is a popular programming language used to add interactivity to websites. It runs in the browser and enhances user experience." },
+          { "title": "React.Js", "desc": "React.js is a JavaScript library for building user interfaces. Its component-based structure allows for reusable and dynamic UI elements." },
+          { "title": "Node.Js", "desc": "Node.js is a platform that allows JavaScript to run on the server side. It simplifies the development of real-time and high-performance applications." }
+        ],
+        "profile": [
+          {
+            "title": "Profile",
+            "subhead": ["Birth Date", "City", "Education", "Preferred Role"],
+            "desc": ["24.03.1996", "Ankara", "Hacettepe Univ. Biology BSc, 2016", "Frontend, UI"]
+          },
+          {
+            "title": "About Me",
+            "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.\n\nMinima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+          }
+        ],
+        "projects": [
+          {
+            "title": "Workintech",
+            "desc": "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+             "image": "/public/projects-one.png"
+          },
+          {
+            "title": "Random Jokes",
+            "desc": "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+            "image": "/public/projects-two.png"
+          },
+          {
+            "title": "Journey",
+            "desc": "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+            "image": "/public/projects-three.png"
+          }
+        ],
+        "footer": {
+          "title": "Let’s work together on your next product.",
+          "links": ["Personal Blog", "Github", "Linkedin"]
+        }
+      }
+    }
+  }
+  
